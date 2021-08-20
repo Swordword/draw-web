@@ -2,16 +2,17 @@ import * as React from 'react'
 
 import { calculateSvg } from '@/lib/calculateSvg'
 
-const { useState, useEffect } = React
+const { useState, useEffect, useRef } = React
 
 const Layout: React.FC = ({ children }) => {
+  const clientWidthRef = useRef(document.body.clientWidth)
   const [currentSVG, setCurrentSVG] = useState(
-    calculateSvg(document.body.clientWidth)
+    calculateSvg(clientWidthRef.current)
   )
-
   useEffect(() => {
-    setCurrentSVG(calculateSvg(document.body.clientWidth))
-  }, [window.document.body.clientWidth])
+    console.log('fn calculateSvg')
+    setCurrentSVG(calculateSvg(clientWidthRef.current))
+  }, [clientWidthRef.current])
   return (
     <div
       style={{

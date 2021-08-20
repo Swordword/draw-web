@@ -5,7 +5,6 @@ import { GRID_COUNT, gridGap } from '@/config'
  * @param {number} height
  */
 export function calculateSvg(width: number) {
-  console.log('fn calculateSvg', width)
   if (!width) return ''
   const gridWidth = Number(
     parseFloat(String(width / GRID_COUNT - gridGap * 2)).toFixed(2)

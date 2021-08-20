@@ -1,2 +1,2 @@
 export const GRID_COUNT = 12
-export const gridGap = 0
+export const gridGap = 8
