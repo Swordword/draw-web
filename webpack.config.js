@@ -24,11 +24,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              ['@babel/preset-env', { targets: "defaults" }]
-            ]
-          }
-        }
+            presets: [['@babel/preset-env', { targets: 'defaults' }]],
+          },
+        },
       },
       {
         test: /\.tsx?$/,
@@ -43,6 +41,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
   },
   devServer: {
     contentBase: './dist',

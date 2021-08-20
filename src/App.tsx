@@ -1,10 +1,12 @@
-import React from 'react'
+import * as React from 'react'
 
-const App = () => {
+import Layout  from '@/Layout'
+
+const App:React.FC = () => {
   return (
-    <div>
-      Hello World
-    </div>
+    <Layout>
+      Draw Your Website!!!
+    </Layout>
   )
 }
 
