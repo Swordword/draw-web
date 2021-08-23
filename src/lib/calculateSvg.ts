@@ -11,7 +11,7 @@ export function calculateSvg(width: number) {
   )
   const gridHeight = Number(parseFloat(String((gridWidth * 2) / 3)).toFixed(2))
   console.log('gridWidth', gridWidth)
-  const aaa = () => {
+  const drawSvg = () => {
     let str = ''
     for (let i = 0; i < GRID_COUNT; i++) {
       const rect = `
@@ -25,6 +25,6 @@ export function calculateSvg(width: number) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${
     gridHeight + gridGap * 2
   }">
-  ${aaa()}
+  ${drawSvg()}
 </svg>`
 }
